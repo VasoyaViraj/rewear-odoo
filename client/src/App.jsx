@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
-import Cloth from "./Pages/cloth";
+import Cloth from "./Pages/Cloth";
 import AddCloth from "./Pages/AddCloth";
 import UserDashboard from "./Pages/UserDashboard";
 import Login from "./Pages/Auth/Login";
@@ -8,12 +8,12 @@ import Register from "./Pages/Auth/Register";
 import Navbarr from "./components/Navbarr";
 import Admin from "./Pages/Admin";
 import Footerr from "./components/Footerr";
-// import { AllProductsProvider } from './contexts/allProductsContext';
+import { UserContextProvider } from "./contexts/UserContext";
 
 function App() {
   return(
     <>
-    {/* <AllProductsProvider> */}
+    <UserContextProvider>
       <BrowserRouter>
       <Navbarr/>
         <Routes>
@@ -27,7 +27,7 @@ function App() {
         </Routes>
       <Footerr/>
       </BrowserRouter>
-    {/* </AllProductsProvider> */}
+    </UserContextProvider>
     </>
   )
 }
