@@ -7,6 +7,7 @@ import Login from "./Pages/Auth/Login";
 import Register from "./Pages/Auth/Register";
 import Navbarr from "./components/Navbarr";
 import Admin from "./Pages/Admin";
+import Footerr from "./components/Footerr";
 // import { AllProductsProvider } from './contexts/allProductsContext';
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           <Route path="/admin" element={<Admin/> }/>
           <Route path="/dashboard" element={<UserDashboard/> }/>
         </Routes>
-      {/* <Footer/> */}
+      <Footerr/>
       </BrowserRouter>
     {/* </AllProductsProvider> */}
     </>
